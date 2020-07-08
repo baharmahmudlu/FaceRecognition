@@ -1,97 +1,24 @@
-# https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py
-
 import face_recognition
 import cv2
 import numpy as np
 
-# This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
-# other example, but it includes some basic performance tweaks to make things run a lot faster:
-#   1. Process each video frame at 1/4 resolution (though still display it at full resolution)
-#   2. Only detect faces in every other frame of video.
-
 # PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
-# OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this
-# specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
 
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-fidan_image = face_recognition.load_image_file("00000.png")
-fidan_face_encoding = face_recognition.face_encodings(fidan_image)[0]
+name_image = face_recognition.load_image_file("img.JPG")
+name_face_encoding = face_recognition.face_encodings(name_image)[0]
 
-# Load a second sample picture and learn how to recognize it.
-bahar_image = face_recognition.load_image_file("img.JPG")
-bahar_face_encoding = face_recognition.face_encodings(bahar_image)[0]
-
-# Load a third sample picture and learn how to recognize it.
-#alisha_image = face_recognition.load_image_file(" ")
-#alisha_face_encoding = face_recognition.face_encodings(alisha_image)[0]
-
-# Load a fourth sample picture and learn how to recognize it.
-#nazila_image = face_recognition.load_image_file(" ")
-#nazila_face_encoding = face_recognition.face_encodings(nazila_image)[0]
-
-# Load a fifth sample picture and learn how to recognize it.
-#elnara_image = face_recognition.load_image_file(" ")
-#elnara_face_encoding = face_recognition.face_encodings(elnara_image)[0]
-
-# Load a sixth sample picture and learn how to recognize it.
-#nasib_image = face_recognition.load_image_file(" ")
-#nasib_face_encoding = face_recognition.face_encodings(nasib_image)[0]
-
-# Load a seventh sample picture and learn how to recognize it.
-#ilyas_image = face_recognition.load_image_file(" ")
-#ilyas_face_encoding = face_recognition.face_encodings(ilyas_image)[0]
-
-# Load a eight sample picture and learn how to recognize it.
-#matin_image = face_recognition.load_image_file(" ")
-#matin_face_encoding = face_recognition.face_encodings(matin_image)[0]
-
-# Load a nineth sample picture and learn how to recognize it.
-#nuri_image = face_recognition.load_image_file(" ")
-#nuri_face_encoding = face_recognition.face_encodings(nuri_image)[0]
-
-# Load a tenth sample picture and learn how to recognize it.
-zamig_image = face_recognition.load_image_file("00001.png")
-zamig_face_encoding = face_recognition.face_encodings(zamig_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
-#bahar_image = face_recognition.load_image_file("img.JPG")
-#bahar_face_encoding = face_recognition.face_encodings(bahar_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
-#bahar_image = face_recognition.load_image_file("img.JPG")
-#bahar_face_encoding = face_recognition.face_encodings(bahar_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
-#bahar_image = face_recognition.load_image_file("img.JPG")
-#bahar_face_encoding = face_recognition.face_encodings(bahar_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    fidan_face_encoding,
-    bahar_face_encoding,
-    #alisha_face_encoding,
-    #nazila_face_encoding,
-    #elnara_face_encoding,
-    #nasib_face_encoding,
-    #ilyas_face_encoding,
-    #matin_face_encoding,
-    #nuri_face_encoding,
-    zamig_face_encoding
+    name_face_encoding
 ]
+
 known_face_names = [
-    "Eldeniz",
-    "Bahar Mahmudlu",
-    #"Alisha Izabakarova",
-    #"Nazila Habibzadeh",
-    #"Elnara Mammadzada",
-    #"Nasib Ahmedov",
-    #"Ilyas Quluzada",
-    #"Matin Qasimov",
-    #"Nurlan Nuri",
-    "Zamig Asgerzadeh"
+    "NAME"
 ]
 
 # Initialize some variables
