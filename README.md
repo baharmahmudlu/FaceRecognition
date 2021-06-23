@@ -1,7 +1,7 @@
-[README.md](https://github.com/baharmahmudlu/FaceRecognition/files/6700735/README.md)
-[requirements.txt](https://github.com/baharmahmudlu/FaceRecognition/files/6700736/requirements.txt)
-# FaceRecognition
+You need to install pre-trained model from here:
+https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit
 
-Use create_face_dataset.py in order to create your image and then put it into faced.py
+Using:
+1. pip install -r requirements.txt
+2. python server.py
 
-![baharmahmudlu_facerecognition_demo](https://user-images.githubusercontent.com/46795837/123072525-afe81380-d426-11eb-9553-803ac78b2e33.gif)
