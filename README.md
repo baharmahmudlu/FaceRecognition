@@ -1,3 +1,5 @@
+[README.md](https://github.com/baharmahmudlu/FaceRecognition/files/6700735/README.md)
+[requirements.txt](https://github.com/baharmahmudlu/FaceRecognition/files/6700736/requirements.txt)
 # FaceRecognition
 
 Use create_face_dataset.py in order to create your image and then put it into faced.py
